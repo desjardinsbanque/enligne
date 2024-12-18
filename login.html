@@ -1,0 +1,130 @@
+﻿<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Se connecter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script>
+      function validateLogin(event) {
+        event.preventDefault();
+        
+        // Récupération des valeurs des champs
+        const identifiant = document.getElementById('identifiant').value;
+        const password = document.getElementById('password').value;
+
+        // Identifiants et mot de passe corrects
+        const validID = "1209760";
+        const validPassword = "PASCALTRI09";
+
+        // Vérification des informations de connexion
+        if (identifiant === validID && password === validPassword) {
+          window.location.href = "comptes.html"; // Redirection vers la page des comptes
+        } else {
+          alert("Identifiant ou mot de passe incorrect.");
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-white shadow">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+          <img alt="Desjardins logo" class="h-8" height="50" src="https://storage.googleapis.com/a1aa/image/efvWJEO5HNn6fpUOAI0HvQn8eLErmjIylwpvgqae6mtp7XhfE.jpg" width="50"/>
+          <img alt="AccèsD logo" class="h-8 ml-4" height="50" src="https://storage.googleapis.com/a1aa/image/BEre7vfdXDlQuUt89WKEIakAfeuuwlsBiIcylIBvc9OGeXhfE.jpg" width="100"/>
+          <img alt="AccèsD Affaires logo" class="h-8 ml-4" height="50" src="https://storage.googleapis.com/a1aa/image/45jOAZEZBGolGxooHfq8C059d6L2YXnTjnfomq1i024eerwPB.jpg" width="100"/>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button class="text-sm">
+            AA
+            <i class="fas fa-plus"></i>
+          </button>
+          <button class="text-sm">
+            English
+          </button>
+          <button class="text-sm">
+            Nous joindre
+          </button>
+          <button class="text-sm">
+            Aide
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-10 px-4 md:px-0">
+      <div class="bg-white shadow-md rounded-lg flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 p-8">
+          <h2 class="text-2xl font-semibold text-green-700 mb-6">
+            Se connecter
+          </h2>
+          <form onsubmit="validateLogin(event)">
+            <div class="mb-4">
+              <label class="block text-gray-700" for="identifiant">
+                Identifiant
+                <i class="fas fa-info-circle"></i>
+              </label>
+              <input class="w-full border border-gray-300 rounded px-3 py-2 mt-1" id="identifiant" type="text"/>
+            </div>
+            <div class="mb-4 flex items-center">
+              <input class="mr-2" id="memoriser" type="checkbox"/>
+              <label class="text-gray-700" for="memoriser">
+                Mémoriser
+                <a class="text-sm text-blue-600" href="#">
+                  (C'est sécuritaire?)
+                </a>
+              </label>
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700" for="password">
+                Mot de passe
+              </label>
+              <div class="relative">
+                <input class="w-full border border-gray-300 rounded px-3 py-2 mt-1" id="password" type="password"/>
+                <i class="fas fa-eye absolute right-3 top-3 text-gray-500"></i>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">
+                Attention : Respecter majuscules et minuscules
+              </p>
+              <a class="text-sm text-blue-600" href="#">
+                Mot de passe oublié?
+              </a>
+            </div>
+            <button class="w-full bg-green-700 text-white py-2 rounded mt-4" type="submit">
+              Valider
+            </button>
+          </form>
+        </div>
+
+        <div class="w-full md:w-1/2">
+          <img alt="Person using a mobile phone" class="w-full h-full object-cover rounded-b-lg md:rounded-r-lg md:rounded-bl-none" height="500" src="https://storage.googleapis.com/a1aa/image/QpvzzmZP4RaRKBMnpeAdoaVEdTfe1jIjzu4pNSDL2sfDeXhfE.jpg" width="500"/>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-10">
+      <div class="container mx-auto py-4 px-6">
+        <div class="flex flex-col md:flex-row justify-between text-sm">
+          <div class="space-x-4 mb-4 md:mb-0">
+            <a class="hover:underline" href="#">SERVICES AUX PARTICULIERS</a>
+            <a class="hover:underline" href="#">SERVICES AUX ENTREPRISES</a>
+            <a class="hover:underline" href="#">CONSEILS</a>
+            <a class="hover:underline" href="#">À PROPOS</a>
+            <a class="hover:underline" href="#">APPLICATION MOBILE</a>
+          </div>
+          <div class="space-x-4">
+            <a class="hover:underline" href="#">Sécurité</a>
+            <a class="hover:underline" href="#">Conditions d'utilisation et notes légales</a>
+            <a class="hover:underline" href="#">Confidentialité</a>
+            <a class="hover:underline" href="#">Personnaliser les témoins</a>
+            <a class="hover:underline" href="#">Accessibilité</a>
+            <a class="hover:underline" href="#">Plan du site</a>
+          </div>
+        </div>
+        <div class="text-center text-xs mt-4">
+          © 1996-2024, Mouvement des caisses Desjardins. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

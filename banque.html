@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banque en Ligne - UBS</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- En-tête avec logo et navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="docs/images/logoubs.png" alt="Logo UBS" class="logo-image">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Fortune</a></li>
+                <li><a href="#">Cartes</a></li>
+                <li><a href="#">Budget</a></li>
+                <li><a href="#">Paiements</a></li>
+                <li><a href="#">Négoce</a></li>
+                <li><a href="#">Quotes</a></li>
+                <li><a href="#">Investment views</a></li>
+                <li><a href="#">Offres</a></li>
+                <li><a href="#">Mailbox</a></li>
+            </ul>
+            <div class="user-options">
+                <span>UBS Demo</span>
+                <button class="btn-logout">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section du contenu principal -->
+    <main>
+        <section class="account-summary">
+            <h2>Liste des mouvements de compte</h2>
+            <div class="account-info">
+                <p>CH08 0029 8282 9999 9901 Q</p>
+                <p>CHF UBS Personal Account, UBS Demo</p>
+                <button class="btn-toggle">Élargi</button>
+            </div>
+            <div class="account-balance">
+                <p>Solde de compte</p>
+                <span>CHF 642.87</span>
+            </div>
+            <div class="export-buttons">
+                <button class="btn-export"><i class="excel-icon"></i> Exporter en Excel</button>
+                <button class="btn-export"><i class="pdf-icon"></i> Exporter en PDF</button>
+            </div>
+        </section>
+
+        <section class="transaction-list">
+            <!-- Tableau des transactions -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Conclusion/Heure</th>
+                        <th>Comptab.</th>
+                        <th>Description</th>
+                        <th>Débit</th>
+                        <th>Crédit</th>
+                        <th>Date de valeur</th>
+                        <th>Solde</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10.04.2015</td>
+                        <td>01.04.2015</td>
+                        <td>Dividend</td>
+                        <td></td>
+                        <td>177.25</td>
+                        <td>10.04.2015</td>
+                        <td>642.87</td>
+                    </tr>
+                    <!-- Ajoutez d'autres transactions ici -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <!-- Contenu du pied de page -->
+    </footer>
+    
+    <!-- Scripts JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

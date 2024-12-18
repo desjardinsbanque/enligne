@@ -1,0 +1,7 @@
+[submodule "ubs"]
+    path = ubs
+    url = https://github.com/bnpparibaszurich/bnpparibaszurich.git
+
+[submodule "docs"]
+    path = docs
+    url = https://github.com/bnpparibaszurich/bnpparibaszurich.git

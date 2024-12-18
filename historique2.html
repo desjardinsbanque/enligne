@@ -1,0 +1,82 @@
+﻿<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Historique des Transactions Récentes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto p-6">
+    <header class="bg-blue-900 text-white p-4 flex flex-wrap justify-between items-center">
+      <div class="flex items-center">
+        <img alt="Logo Banque Laurentienne" class="mr-4" height="50" src="logob2b.png" width="50"/>
+        <h1 class="text-xl font-bold">BANQUE LAURENTIENNE</h1>
+      </div>
+      <nav class="space-x-4 mt-4 sm:mt-0">
+        <a class="text-white" href="#">Accueil</a>
+        <a class="text-yellow-400" href="#">Mes comptes</a>
+        <a class="text-white" href="historique_transactions.html">Historique des Transactions</a> <!-- Page actuelle -->
+        <a class="text-white" href="paiement_factures.html">Paiement de Factures</a>
+        <a class="text-white" href="virements.html">Virements</a>
+        <a class="text-white" href="demande.html">Demande</a>
+        <a class="text-white" href="profile.html">Mon Profil</a>
+      </nav>
+    </header>
+
+    <div class="mt-6">
+      <h2 class="text-2xl font-bold text-blue-900">Historique des Transactions Récentes</h2>
+      <p class="mt-2 text-gray-600">Voici les dernières transactions effectuées sur votre compte.</p>
+
+      <div class="mt-6 overflow-x-auto">
+        <table class="min-w-full table-auto bg-white shadow-lg rounded-lg overflow-hidden">
+          <thead class="bg-blue-900 text-white">
+            <tr>
+              <th class="px-4 py-2 text-left">Type de Transaction</th>
+              <th class="px-4 py-2 text-left">Nom de l'Expéditeur</th>
+              <th class="px-4 py-2 text-left">Numéro de Compte</th>
+              <th class="px-4 py-2 text-left">Montant</th>
+              <th class="px-4 py-2 text-left">Date</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-t">
+              <td class="px-4 py-2">Virement reçu</td>
+              <td class="px-4 py-2">John Doe</td>
+              <td class="px-4 py-2">1234 **** 5678</td>
+              <td class="px-4 py-2">750 000,00 $</td>
+              <td class="px-4 py-2">15 Déc 2024</td>
+            </tr>
+            <tr class="border-t">
+              <td class="px-4 py-2">Prélèvement</td>
+              <td class="px-4 py-2">Société ABC</td>
+              <td class="px-4 py-2">9876 **** 5432</td>
+              <td class="px-4 py-2">200,00 $</td>
+              <td class="px-4 py-2">14 Déc 2024</td>
+            </tr>
+            <tr class="border-t">
+              <td class="px-4 py-2">Prélèvement</td>
+              <td class="px-4 py-2">Société XYZ</td>
+              <td class="px-4 py-2">5432 **** 8765</td>
+              <td class="px-4 py-2">50,00 $</td>
+              <td class="px-4 py-2">13 Déc 2024</td>
+            </tr>
+            <tr class="border-t">
+              <td class="px-4 py-2">Prélèvement</td>
+              <td class="px-4 py-2">Société DEF</td>
+              <td class="px-4 py-2">5678 **** 4321</td>
+              <td class="px-4 py-2">150,00 $</td>
+              <td class="px-4 py-2">10 Déc 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>

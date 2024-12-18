@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profil Jessica Girolt</title>
+    <!-- CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Fonction pour vérifier l'état de la connexion
+        function checkLogin() {
+            let user = getCookie('username');
+            if (user) {
+                document.getElementById('loginButton').style.display = 'none';
+                document.getElementById('logoutButton').style.display = 'inline-block';
+                document.getElementById('userMessage').innerText = `Bienvenue, ${user}!`;
+            } else {
+                document.getElementById('loginButton').style.display = 'inline-block';
+                document.getElementById('logoutButton').style.display = 'none';
+                document.getElementById('userMessage').innerText = '';
+            }
+        }
+
+        // Fonction de connexion
+        function login() {
+            let username = prompt("Entrez votre nom d'utilisateur:");
+            if (username) {
+                setCookie('username', username, 1); // Sauvegarde dans un cookie pour 1 jour
+                checkLogin(); // Met à jour l'état de la page
+            }
+        }
+
+        // Fonction de déconnexion
+        function logout() {
+            deleteCookie('username');
+            checkLogin();
+        }
+
+        // Fonction pour définir un cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Fonction pour obtenir un cookie
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Fonction pour supprimer un cookie
+        function deleteCookie(name) {
+            document.cookie = name + "=; Max-Age=-99999999; path=/";
+        }
+
+        window.onload = checkLogin; // Vérifie l'état de la connexion lors du chargement de la page
+    </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- En-tête -->
+    <header class="bg-blue-900 text-white py-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="images/logob2b.png" alt="Logo" class="h-10">
+                <span class="text-xl font-bold">Banque B2B</span>
+            </div>
+            <nav>
+                <ul class="flex space-x-5">
+                    <li><a href="#" class="hover:text-gray-300">Accueil</a></li>
+                    <li><a href="#" class="hover:text-gray-300">À propos</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Services</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <!-- Message de bienvenue utilisateur -->
+                <span id="userMessage" class="text-white mr-4"></span>
+                <!-- Boutons de connexion et déconnexion -->
+                <button id="loginButton" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="login()">
+                    Se connecter
+                </button>
+                <button id="logoutButton" class="bg-red-500 text-white px-4 py-2 rounded" onclick="logout()" style="display: none;">
+                    Se déconnecter
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Profil -->
+    <section class="bg-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center md:space-x-10">
+                <!-- Photo de profil -->
+                <div class="mb-5 md:mb-0">
+                    <img src="https://placekitten.com/200/200" alt="Chat" class="w-40 h-40 rounded-full border-4 border-blue-900">
+                </div>
+                <!-- Informations du profil -->
+                <div>
+                    <h1 class="text-3xl font-semibold text-blue-900">Jessica Girolt</h1>
+                    <p class="text-sm text-gray-600">Née le 12 février 1979</p>
+                    <p class="text-lg text-gray-800 mt-2">Directrice des Relations Clientèles</p>
+                    <p class="text-lg text-gray-800">Banque B2B</p>
+                </div>
+            </div>
+
+            <!-- Informations personnelles -->
+            <div class="mt-10">
+                <h2 class="text-2xl font-semibold text-blue-900">Informations Personnelles</h2>
+                <ul class="mt-5 space-y-3 text-gray-700">
+                    <li><strong>Email :</strong> jessica.girolt@b2b.com</li>
+                    <li><strong>Téléphone :</strong> +33 1 23 45 67 89</li>
+                    <li><strong>Adresse :</strong> 123, rue de la Banque, Paris, France</li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="mt-10">
+                <h2 class="text-2xl font-semibold text-blue-900">Contact</h2>
+                <p class="text-gray-700 mt-3">Vous pouvez la contacter directement pour plus d'informations ou pour discuter de vos besoins bancaires professionnels.</p>
+                <button class="mt-5 px-6 py-3 bg-blue-900 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all">Contacter Jessica</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-5">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Banque B2B. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

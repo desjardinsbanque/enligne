@@ -1,0 +1,74 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Desjardins</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <!-- Ajout du logo avec taille agrandie et effets de bordure et ombre -->
+                <img src="images/desjardinlogo.png" alt="Logo Desjardins" class="h-16 w-auto border-4 border-white shadow-lg"/>
+            </div>
+            <nav class="flex space-x-4 text-white">
+                <a class="hover:underline" href="#">À propos</a>
+                <a class="hover:underline" href="#">Carrières</a>
+                <a class="hover:underline" href="#">Conseils</a>
+                <a class="hover:underline" href="#">Nous joindre</a>
+                <a class="hover:underline" href="#">QC | Français</a>
+                <a class="hover:underline" href="#"><i class="fas fa-search"></i></a>
+            </nav>
+        </div>
+    </header>
+    <div class="bg-green-800 text-white p-2">
+        <div class="container mx-auto flex justify-between">
+            <div class="flex space-x-4">
+                <a class="hover:underline" href="#">Particuliers</a>
+                <a class="hover:underline" href="#">Entreprises</a>
+            </div>
+            <div class="flex space-x-4">
+                <a class="hover:underline" href="#">Points de service</a>
+                <a class="hover:underline" href="login.html">Se connecter</a> <!-- Modification ici -->
+            </div>
+        </div>
+    </div>
+    <main class="container mx-auto mt-8 px-4">
+        <h1 class="text-3xl font-bold mb-6 text-center">Toujours à vos côtés</h1>
+        <section class="bg-green-100 p-6 rounded-lg mb-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-xl font-bold mb-4">Situation chez Postes Canada</h2>
+                    <p class="mb-4">
+                        Dans notre foire aux questions, obtenez des conseils pour réduire les effets de cette situation sur vos opérations financières. Par exemple, utilisez nos services mobiles et en ligne pour faire vos transactions ou envoyer et recevoir des documents importants rapidement.
+                    </p>
+                    <button class="bg-green-700 text-white px-4 py-2 rounded">Consulter la foire aux questions</button>
+                </div>
+                <div class="md:w-1/2 mt-4 md:mt-0">
+                    <!-- Image 1 : visuel-home.jpg -->
+                    <img src="images/visuel-home.jpg" alt="Accueil visuel" class="rounded-lg mx-auto" width="600" height="400"/>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white p-6 rounded-lg shadow">
+            <!-- Image 2 : image2.jpeg -->
+            <img src="images/image2.jpeg" alt="Deux personnes en discussion" class="rounded-lg mb-4 mx-auto" width="600" height="400"/>
+            <h2 class="text-xl font-bold mb-2 text-center">Ça grandit vite un enfant</h2>
+            <p class="mb-4 text-center">
+                Régime enregistré d'épargne-études : en cotisant tôt, vous pourriez épargner plus.
+            </p>
+            <div class="text-center">
+                <button class="bg-green-700 text-white px-4 py-2 rounded">En savoir plus</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

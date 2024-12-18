@@ -1,0 +1,249 @@
+﻿<html>
+<head>
+    <title>
+        BNP Paribas - Virements et Services
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header .title {
+            font-size: 18px;
+            color: #333;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons i {
+            font-size: 18px;
+            margin-left: 15px;
+            color: #333;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            padding-top: 60px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #444;
+        }
+        .sidebar ul li.active {
+            background-color: #4CAF50;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .service {
+            width: calc(33.333% - 20px);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .service i {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .service h2 {
+            font-size: 18px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .service p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img alt="BNP Paribas Logo" height="40" src="https://storage.googleapis.com/a1aa/image/7YbkjIoLgtaUNhG01iO7KSe02BTTzV9bEsSqqdKdDhfc9nsTA.jpg" width="40"/>
+        <div class="title">
+            La banque d'un monde qui change
+        </div>
+        <div class="icons">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-file-alt"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-power-off"></i>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="#">
+                    COMPTES ET CONTRATS
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    VIREMENTS ET SERVICES
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    SUIVRE MON BUDGET
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    BOURSE ET OPC
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    NOTRE OFFRE
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    VOUS ET VOS BESOINS
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    NOUS CONTACTER
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    MA BANQUE ET MOI
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Sécurité, conseils et bonnes pratiques
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>
+            VIREMENTS ET SERVICES
+        </h1>
+        <div class="services">
+            <div class="service">
+                <a href="virements.html">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h2>
+                        Virements
+                    </h2>
+                    <p>
+                        Effectuer un virement, gérer ses bénéficiaires
+                    </p>
+                </a>
+            </div>
+            <div class="service">
+                <i class="fas fa-file-alt"></i>
+                <h2>
+                    RIB
+                </h2>
+                <p>
+                    Editer un RIB/IBAN
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-times"></i>
+                <h2>
+                    Oppositions
+                </h2>
+                <p>
+                    Opposer une carte, un chèque
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-book"></i>
+                <h2>
+                    Chéquiers
+                </h2>
+                <p>
+                    Effectuer une commande
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-download"></i>
+                <h2>
+                    Téléchargement des opérations
+                </h2>
+                <p>
+                    Télécharger vos opérations
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-check"></i>
+                <h2>
+                    Autorisation de prélèvement
+                </h2>
+                <p>
+                    Autoriser un prélèvement
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-lock"></i>
+                <h2>
+                    Paylib
+                </h2>
+                <p>
+                    Sécuriser mes paiements en ligne
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-file-pdf"></i>
+                <h2>
+                    Relevés en ligne
+                </h2>
+                <p>
+                    Retrouver les relevés et contrats en PDF
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

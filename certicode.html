@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Envoyer Certicode</title>
+    <script>
+        async function sendCerticode(event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+
+            const response = await fetch('/send-certicode', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ email: email })
+            });
+
+            if (response.ok) {
+                alert("Certicode envoyé avec succès !");
+            } else {
+                alert("Erreur lors de l'envoi du Certicode.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="sendCerticode(event)">
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" required/>
+        <button type="submit">Envoyer le Certicode</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres</title>
+    <link rel="stylesheet" href="css/parametre.css">
+</head>
+<body>
+    <header>
+        <h1>Paramètres</h1>
+        <nav>
+            <ul>
+                <li><a href="comptes.html">Comptes</a></li>
+                <li><a href="virements.html">Virements</a></li>
+                <li><a href="epargner.html">Epargner</a></li>
+                <li><a href="emprunter.html">Emprunter</a></li>
+                <li><a href="messagerie.html">Messagerie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Paramètres du Compte</h2>
+            <form id="parametreForm">
+                <label for="seuilRetrait">Seuil de Retrait:</label>
+                <input type="number" id="seuilRetrait" name="seuilRetrait" placeholder="Montant en CHF">
+                <label for="notifications">Notifications:</label>
+                <select id="notifications" name="notifications">
+                    <option value="email">Par Email</option>
+                    <option value="sms">Par SMS</option>
+                    <option value="none">Aucune</option>
+                </select>
+                <button type="submit">Sauvegarder</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/parametre.js"></script>
+</body>
+</html>

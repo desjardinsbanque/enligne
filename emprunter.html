@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprunter - UBS</title>
+    <link rel="stylesheet" href="css/emprunter.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #eb001b; /* Couleur principale UBS */
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900; /* Couleur secondaire UBS */
+        }
+
+        main {
+            padding: 20px 0;
+            background-color: #fff;
+            margin-top: -4px;
+        }
+
+        h2, h3 {
+            color: #eb001b; /* Utilisation de la couleur principale UBS */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff9900; /* Couleur secondaire UBS */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #eb001b; /* Couleur principale UBS */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f3f4f6;
+            border-top: 1px solid #eb001b;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">UBS</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="comptes.html">Comptes</a></li>
+                    <li><a href="proteger.html">Protéger</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Nos Prêts</h2>
+            <p>Découvrez les différents types de prêts que nous offrons.</p>
+            <h3>Simulateur de Prêt</h3>
+            <p>Estimez vos mensualités en utilisant notre simulateur de prêt.</p>
+            <a href="simulateur.html" class="btn">Simuler un Prêt</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Banque UBS. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Ajout d'une animation au chargement de la page pour le bouton
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.querySelector('.btn');
+            btn.style.opacity = 0;
+            setTimeout(() => {
+                btn.style.opacity = 1;
+                btn.style.transition = "opacity 1s ease-in-out";
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

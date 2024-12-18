@@ -1,0 +1,68 @@
+﻿<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Nos Services | B2B Banque</title>
+  <script>
+    // Fonction pour vérifier si l'utilisateur est connecté
+    function isLoggedIn() {
+      return localStorage.getItem('isLoggedIn') === 'true';
+    }
+
+    // Fonction de connexion
+    function login() {
+      localStorage.setItem('isLoggedIn', 'true');
+      document.getElementById('login-button').style.display = 'none';
+      document.getElementById('logout-button').style.display = 'inline-block';
+      alert('Bienvenue !');
+    }
+
+    // Fonction de déconnexion
+    function logout() {
+      localStorage.setItem('isLoggedIn', 'false');
+      document.getElementById('login-button').style.display = 'inline-block';
+      document.getElementById('logout-button').style.display = 'none';
+      alert('Vous êtes déconnecté.');
+    }
+
+    // Vérifier l'état de connexion au chargement de la page
+    window.onload = function() {
+      if (isLoggedIn()) {
+        document.getElementById('login-button').style.display = 'none';
+        document.getElementById('logout-button').style.display = 'inline-block';
+      } else {
+        document.getElementById('login-button').style.display = 'inline-block';
+        document.getElementById('logout-button').style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body class="font-sans">
+  <!-- Include Header and Navigation -->
+  <header>
+    <!-- Code pour le header et la navigation ici -->
+  </header>
+  
+  <main class="container mx-auto py-8">
+    <h1 class="text-2xl font-bold mb-6">Nos Services</h1>
+    <ul class="list-disc list-inside">
+      <li>Services aux courtiers</li>
+      <li>Services de financement</li>
+      <li>Service aux intermédiaires</li>
+    </ul>
+
+    <!-- Boutons de connexion et déconnexion -->
+    <div class="mt-5">
+      <button id="login-button" onclick="login()" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-500">Se connecter</button>
+      <button id="logout-button" onclick="logout()" class="px-6 py-3 bg-red-600 text-white rounded-lg shadow-md hover:bg-red-500" style="display: none;">Se déconnecter</button>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 B2B Banque. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>

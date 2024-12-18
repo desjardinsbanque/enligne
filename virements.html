@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effectuer un Virement</title>
+    <style>
+        /* Styles CSS intégrés */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .logout-btn {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .transfer-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .transfer-form h2 {
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+
+        .form-group input[readonly] {
+            background-color: #f0f0f0;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Styles pour la barre de chargement */
+        .loading-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading-bar {
+            width: 50%;
+            height: 5px;
+            background-color: #4CAF50;
+            margin: 0 auto;
+            animation: loading 3s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 50%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Effectuer un virement</h1>
+            <div class="user-info">
+                <span>Vous êtes connecté</span>
+                <button class="logout-btn" onclick="logout()">Déconnexion</button>
+            </div>
+        </header>
+
+        <form class="transfer-form" id="virement-form" onsubmit="return submitVirement()">
+            <h2>Virement ponctuel</h2>
+
+            <div class="form-group">
+                <label for="account-emitter">Sélectionnez un compte émetteur</label>
+                <select id="account-emitter" required>
+                    <option value="03940">Compte - N°03940 000000XXXXXX</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="balance">Solde du jour</label>
+                <input type="text" id="balance" value="+2,218.30 EUR" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="recipient-account">Sélectionnez ou saisissez un compte bénéficiaire</label>
+                <select id="recipient-account" required>
+                    <option value="82012700000">Compte - FRA 82012700000</option>
+                    <option value="new">Ajouter un compte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transfer-amount">Montant</label>
+                <input type="number" id="transfer-amount" placeholder="Entrez le montant" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transfer-date">Date de prélèvement</label>
+                <input type="date" id="transfer-date" value="2023-09-07" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transfer-reason">Motif (facultatif)</label>
+                <input type="text" id="transfer-reason" placeholder="Motif du virement">
+            </div>
+
+            <div class="form-group">
+                <label for="recipient-name">Nom du bénéficiaire</label>
+                <input type="text" id="recipient-name" value="TONEO FIRST" readonly>
+            </div>
+
+            <button type="submit" class="btn">Valider</button>
+        </form>
+
+        <!-- Barre de chargement et message -->
+        <div id="loading-container" class="loading-container">
+            <div class="loading-bar"></div>
+            <p id="loading-message">Virement en cours de vérification...</p>
+        </div>
+    </div>
+
+    <script>
+        // Script JavaScript intégré
+        function submitVirement() {
+            // Affichage de la barre de chargement
+            document.getElementById('loading-container').style.display = 'block';
+
+            // Simuler un délai pour la vérification du virement
+            setTimeout(function() {
+                document.getElementById('loading-container').style.display = 'none';
+                alert('Virement effectué avec succès!');
+            }, 3000);
+
+            return false;  // Empêche le formulaire d'être réellement soumis
+        }
+
+        function logout() {
+            // Action de déconnexion (simulation ici)
+            alert("Vous êtes déconnecté.");
+        }
+    </script>
+</body>
+</html>

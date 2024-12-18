@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valider les Virements</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mx-auto mt-10">
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold">Valider les Virements</h1>
+            <div>
+                <img src="chemin/vers/logo.png" alt="Logo UBS" class="h-16">
+            </div>
+        </header>
+
+        <main>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Liste des Virements à Valider</h2>
+                <table class="min-w-full border">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="py-2 border-b">Date</th>
+                            <th class="py-2 border-b">Montant</th>
+                            <th class="py-2 border-b">Destinataire</th>
+                            <th class="py-2 border-b">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 border-b">01/10/2024</td>
+                            <td class="py-2 border-b">500,00 EUR</td>
+                            <td class="py-2 border-b">Client A</td>
+                            <td class="py-2 border-b">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">Valider</button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 border-b">02/10/2024</td>
+                            <td class="py-2 border-b">1 000,00 EUR</td>
+                            <td class="py-2 border-b">Client B</td>
+                            <td class="py-2 border-b">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">Valider</button>
+                            </td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes si nécessaire -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
